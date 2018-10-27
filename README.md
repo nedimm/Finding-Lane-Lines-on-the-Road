@@ -210,6 +210,15 @@ The complete pipeline is shown on the images below:
 <img src="steps_images/all_steps.png" alt="All steps"/>
 Some resulting images:
 <img src="images_result/result_test_images.png" alt="Results"/>
+All steps can be reproduces by running the provided Jupyter notebook.
+
+Conclusion
+---
+The project was successful since all lines were detected successfully even on the challenging video.
+
+A drawback of this solution is that only straight lane lines are detected. By using for example poly fitting the algorithm could be changed so that it detects also curved lines. For the provided videos it is not a problem since the nearest lines to the car are straight.
+
+Another problem is that the horizontal line as a top boundary of the lane lines is set explicitly, and works well only on if the road is not too steep. In that case, the top horizontal line would need to be estimated differently.
 
 
 
