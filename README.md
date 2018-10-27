@@ -43,7 +43,7 @@ Reading images is done with a **matplotlib** function:
 import matplotlib.image as mpimg
 image = mpimg.imread('test_images/solidWhiteRight.jpg')
 ```
-In this case images are loaded in RGB space, which might not be the most suitable format for extracting yellow and white lines in our case.
+In this case images are loaded in RGB space, which might not be the most suitable format for extracting yellow and white lines, especially if there are shadows on the road.
 
 
 
