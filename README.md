@@ -41,9 +41,29 @@ Color Selection
 Reading images is done with a **matplotlib** function:
 ```python
 import matplotlib.image as mpimg
-image = mpimg.imread('test_images/solidWhiteRight.jpg')
+image = mpimg.imread('test_images/solidYellowCurve.jpg')
 ```
+<img src="test_images/solidYellowCurve.jpg" width="480" alt="Solid Yelow Curve"/>
+
 In this case images are loaded in RGB space, which might not be the most suitable format for extracting yellow and white lines, especially if there are shadows on the road.
+
+After some experimentation I found that the best results are if we transform the image into HLS space and then extract the yellow and white colors:
+```python
+def mask_white_yellow_hls(image):
+    converted = cv2.cvtColor(image, cv2.COLOR_RGB2HLS)
+    # white
+    lower = np.uint8([0, 200, 0])
+    upper = np.uint8([255, 255, 255])
+    white_mask = cv2.inRange(converted, lower, upper)
+    # yellow
+    lower = np.uint8([10, 0, 100])
+    upper = np.uint8([40, 255, 255])
+    yellow_mask = cv2.inRange(converted, lower, upper)
+    # combine
+    mask = cv2.bitwise_or(white_mask, yellow_mask)
+    return cv2.bitwise_and(image, image, mask=mask)
+```
+<img src="steps_images/hls_masked_solidYellowCurve.jpg" width="480" alt="Solid Yelow Curve"/>
 
 
 
