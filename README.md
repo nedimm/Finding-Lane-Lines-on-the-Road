@@ -25,7 +25,7 @@ Input images
 ---
 We start with reading the input images. Some of the test images are:
 
-<img src="test_images/solidWhiteCurve.jpg" width="480" alt="Solid White Curve">
-<img src="test_images/solidYellowCurve.jpg" width="480" alt="Solid Yelow Curve>
+<img src="test_images/solidWhiteCurve.jpg" width="480" alt="Solid White Curve"/>
+<img src="test_images/solidYellowCurve.jpg" width="480" alt="Solid Yelow Curve/>
 <img src="challenge_images/xchallenge2.jpg" width="480" alt="Challenge 2" />
 <img src="challenge_images/xchallenge3.jpg" width="480" alt="Challenge 3" />
