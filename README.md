@@ -208,6 +208,9 @@ def get_average_line(line, lines):
 ```
 The complete pipeline is shown on the images below:
 <img src="steps_images/all_steps.png" alt="All steps"/>
+Some resulting images:
+<img src="images_result/result_test_images.png" alt="Results"/>
+
 
 
 
