@@ -63,6 +63,28 @@ def mask_white_yellow_hls(image):
     mask = cv2.bitwise_or(white_mask, yellow_mask)
     return cv2.bitwise_and(image, image, mask=mask)
 ```
+
+Canny Edge Detection
+---
+The Canny edge detector is an edge detection operator that uses a multi-stage algorithm to detect a wide range of edges in images. It was developed by John F. Canny in 1986.
+From the OpenCV we call it with:
+```python
+cv2.Canny(img, low_threshold, high_threshold)
+```
+I've got the best results with thresholds set to _low_threshold=50_ and _high_threshold=150_.
+The _Canny_ function expects a grayscale image, which should be smoothed by applying _GaussianBlur_ to eliminate rough edges. All three functions are:
+
+```python
+def grayscale(img):
+    return cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
+
+def gaussian_blur(img, kernel_size=15):
+    return cv2.GaussianBlur(img, (kernel_size, kernel_size), 0)
+    
+def canny(img, low_threshold=50, high_threshold=150):
+    return cv2.Canny(img, low_threshold, high_threshold)
+```
+
 <img src="steps_images/all_steps.png" alt="All steps"/>
 
 
