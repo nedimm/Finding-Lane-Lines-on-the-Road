@@ -21,7 +21,7 @@ The complete pipeline is presented in the Jupyter file provided and consists of 
 * Line detection by Hough transformation
 * Lines averaging and extrapolation
 
-Input images
+Input Images
 ---
 We start with reading the input images. Some of the test images are:
 
@@ -35,6 +35,15 @@ We start with reading the input images. Some of the test images are:
     <td><img src="challenge_images/xchallenge3.jpg" width="480" alt="Challenge 3"/></td>
   </tr>
 </table>
+
+Color Selection
+---
+Reading images is done with a **matplotlib** function:
+```python
+import matplotlib.image as mpimg
+image = mpimg.imread('test_images/solidWhiteRight.jpg')
+```
+In this case images are loaded in RGB space, which might not be the most suitable format for extracting yellow and white lines in our case.
 
 
 
