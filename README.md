@@ -1,7 +1,7 @@
 # **Finding Lane Lines on the Road** 
 
-<img src="examples/laneLines_thirdPass.jpg" width="480" alt="Combined Image" />
-[Results on Youtube](https://www.youtube.com/watch?v=F7gluNuSx50&list=PL06vO3TcKwfYCAyu5FBqnhxylDzH1chP2)
+[![Finding Lane Lines on the Road](https://i.imgur.com/D9cvND0.png)](https://www.youtube.com/watch?v=nrJ2Y6M46r8 "Finding Lane Lines on the Road")
+[More results on Youtube](https://www.youtube.com/watch?v=F7gluNuSx50&list=PL06vO3TcKwfYCAyu5FBqnhxylDzH1chP2)
 
 Overview
 ---
