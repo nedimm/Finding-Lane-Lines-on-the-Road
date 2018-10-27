@@ -24,5 +24,6 @@ The complete pipeline is presented in the Jupyter file provided and consists of 
 Input images
 ---
 We start with reading the input images. Some of the images are:
-![test_image_1](test_images\solidWhiteCurve.jpg) ![test_image_1](test_images\solidWhiteCurve.jpg)
-
+<img src="test_images/solidWhiteCurve.jpg" width="200">
+<img src="test_images/solidYellowCurve.jpg" width="200">
+<img src="examples/laneLines_thirdPass.jpg" width="480" alt="Combined Image" />
