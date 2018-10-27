@@ -63,7 +63,7 @@ def mask_white_yellow_hls(image):
     mask = cv2.bitwise_or(white_mask, yellow_mask)
     return cv2.bitwise_and(image, image, mask=mask)
 ```
-<img src="steps_images/hls_masked_solidYellowCurve.png" width="480" alt="Solid Yelow Curve"/>
+<img src="steps_images/all_steps.png" width="480" alt="Solid Yelow Curve"/>
 
 
 
