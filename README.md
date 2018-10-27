@@ -21,8 +21,29 @@ The complete pipeline is presented in the Jupyter file provided and consists of 
 * Line detection by Hough transformation
 * Lines averaging and extrapolation
 
-Input images
+Input Images
 ---
-We start with reading the input images. Some of the images are:
-![test_image_1](test_images\solidWhiteCurve.jpg) ![test_image_1](test_images\solidWhiteCurve.jpg)
+We start with reading the input images. Some of the test images are:
+
+<table>
+  <tr>
+    <td><img src="test_images/solidWhiteCurve.jpg" width="480" alt="Solid White Curve"/></td>
+    <td><img src="test_images/solidYellowCurve.jpg" width="480" alt="Solid Yelow Curve"/></td>
+  </tr>
+  <tr>
+    <td><img src="challenge_images/xchallenge2.jpg" width="480" alt="Challenge 2" /></td>
+    <td><img src="challenge_images/xchallenge3.jpg" width="480" alt="Challenge 3"/></td>
+  </tr>
+</table>
+
+Color Selection
+---
+Reading images is done with a **matplotlib** function:
+```python
+import matplotlib.image as mpimg
+image = mpimg.imread('test_images/solidWhiteRight.jpg')
+```
+In this case images are loaded in RGB space, which might not be the most suitable format for extracting yellow and white lines, especially if there are shadows on the road.
+
+
 
