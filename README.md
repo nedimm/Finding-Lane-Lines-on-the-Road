@@ -43,7 +43,7 @@ Reading images is done with a **matplotlib** function:
 import matplotlib.image as mpimg
 image = mpimg.imread('test_images/solidYellowCurve.jpg')
 ```
-<img src="test_images/solidYellowCurve.jpg" width="480" alt="Solid Yelow Curve"/>
+<img src="steps_images/solidYellowCurve.jpg" width="640" alt="Solid Yelow Curve"/>
 
 In this case images are loaded in RGB space, which might not be the most suitable format for extracting yellow and white lines, especially if there are shadows on the road.
 
@@ -63,7 +63,7 @@ def mask_white_yellow_hls(image):
     mask = cv2.bitwise_or(white_mask, yellow_mask)
     return cv2.bitwise_and(image, image, mask=mask)
 ```
-<img src="steps_images/hls_masked_solidYellowCurve.jpg" width="480" alt="Solid Yelow Curve"/>
+<img src="steps_images/hls_masked_solidYellowCurve.jpg" width="640" alt="Solid Yelow Curve"/>
 
 
 
